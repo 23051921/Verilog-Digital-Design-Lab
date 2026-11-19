@@ -28,6 +28,9 @@ Verilog-Digital-Design-Lab/
 ├── 05_Universal_NAND_SOP/       # Sum of Products using universal NAND logic
 │   ├── sop.v                    # De Morgan minimized SOP RTL
 │   └── tb_sop.v                 # Exhaustive input verification testbench
+├── 06_JK_Flip_Flop/             # Edge-triggered JK Flip-Flop with toggle logic
+│   ├── jk_ff.v                  # Clocked sequential flip-flop RTL
+│   └── tb_jk_ff.v               # Clock & truth-table verification testbench
 ├── .gitignore                   # Ignore Vivado temporary synthesis & sim files
 └── README.md                    # Hardware suite documentation
 ```
@@ -60,6 +63,15 @@ Verilog-Digital-Design-Lab/
 ### 5. 05_Universal_NAND_SOP
 * **Boolean Realization:** Converts multi-term AND-OR expressions into equivalent inverted NAND representations via De Morgan's Laws.
 * **Gate Architecture:** Built strictly from 2-input NAND primitives.
+
+### 6. 06_JK_Flip_Flop
+* **Function:** Universal sequential memory element with hold, reset, set, and toggle modes.
+* **Characteristic Behavior:** Evaluates inputs `{j, k}` on `posedge clk`:
+  - `2'b00`: Hold state ($Q \leftarrow Q$)
+  - `2'b01`: Reset state ($Q \leftarrow 0$)
+  - `2'b10`: Set state ($Q \leftarrow 1$)
+  - `2'b11`: Toggle state ($Q \leftarrow \overline{Q}$)
+* **Outputs:** True output `q` and complementary output `qb`.
 
 ---
 
