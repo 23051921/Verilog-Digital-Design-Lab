@@ -1,0 +1,17 @@
+# Vivado / EDA Artifacts
+*.jou
+*.log
+*.pb
+*.wdb
+*.vcd
+*.str
+.Xil/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.cache/
+
+# OS
+.DS_Store
+Thumbs.db
